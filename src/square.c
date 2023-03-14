@@ -12,5 +12,20 @@
 int main(int argc, char *argv[])
 {
 
+  int side = 0;
+
+// if argument number is incorrect output this notice
+  if (argc != 2) 
+  {
+    printf("Incorrect number of arguments provided.\n");
+    return 0;
+  }
+
+// read in side lengths one at a time and calculate square area
+  while (scanf("%d", &side) != EOF) 
+  {
+    printf("%d %s\n", square_area(side), argv[1]);
+  }
+
   return 0;
 }
